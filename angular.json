@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "sample-angular": {
+    "ejercicio-aplicativo": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/sample-angular",
+            "outputPath": "dist/ejercicio-aplicativo",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -68,10 +68,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "sample-angular:build:production"
+              "browserTarget": "ejercicio-aplicativo:build:production"
             },
             "development": {
-              "browserTarget": "sample-angular:build:development"
+              "browserTarget": "ejercicio-aplicativo:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -79,7 +79,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "sample-angular:build"
+            "browserTarget": "ejercicio-aplicativo:build"
           }
         },
         "test": {
@@ -102,5 +102,5 @@
       }
     }
   },
-  "defaultProject": "sample-angular"
+  "defaultProject": "ejercicio-aplicativo"
 }

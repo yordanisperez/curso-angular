@@ -1,6 +1,7 @@
 {
-  "name": "sample-angular",
+  "name": "ejercicio-aplicativo",
   "version": "0.0.0",
+  "author": "Yordanis Perez Brito",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
