@@ -14,6 +14,12 @@ export class DataBindingComponent implements OnInit {
     "cantidad": 0,
     "imagen":"assets/azul.jpg"
   }
+  /*downCantidad(){
+    if (libro.cantidad > 0 ) libro.cantidad--;
+    }
+    upCantidad(){
+    if (libro.cantidad < libro.stock ) libro.cantidad++;
+    }*/
   constructor() { }
 
   ngOnInit(): void {
