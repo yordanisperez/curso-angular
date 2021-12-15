@@ -9,6 +9,9 @@ import { Compo3Component } from './compo3/compo3.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { DirNgClassComponent } from './dir-ng-class/dir-ng-class.component';
 import { DirNgIfComponent } from './dir-ng-if/dir-ng-if.component';
+import { DirNgForComponent } from './dir-ng-for/dir-ng-for.component';
+import { DirNgSwitchComponent } from './dir-ng-switch/dir-ng-switch.component';
+import { DirNgModelComponent } from './dir-ng-model/dir-ng-model.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { DirNgIfComponent } from './dir-ng-if/dir-ng-if.component';
     Compo3Component,
     DataBindingComponent,
     DirNgClassComponent,
-    DirNgIfComponent
+    DirNgIfComponent,
+    DirNgForComponent,
+    DirNgSwitchComponent,
+    DirNgModelComponent
   ],
   imports: [
     BrowserModule,

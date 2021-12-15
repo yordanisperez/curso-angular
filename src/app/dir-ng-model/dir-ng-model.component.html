@@ -1,0 +1,12 @@
+<p>dir-ng-model works!</p>
+<h1>{{title}}</h1>
+<br>
+<div class="container bg">
+  <br>
+  <input class="form-control" [(ngModel)]="nombre" (keyup)="cambiaNombre($event)"><br>
+  <input class="form-control" [(ngModel)]="nombre2" (keyup)="cambiaNombre2($event)"><br>
+</div>
+<br>
+<div *ngIf="nombre" class="container bg2">
+  <h3>Hola {{ nombre }} / {{ nombre2 }}</h3>
+</div>
