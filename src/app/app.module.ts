@@ -12,6 +12,9 @@ import { DirNgIfComponent } from './dir-ng-if/dir-ng-if.component';
 import { DirNgForComponent } from './dir-ng-for/dir-ng-for.component';
 import { DirNgSwitchComponent } from './dir-ng-switch/dir-ng-switch.component';
 import { DirNgModelComponent } from './dir-ng-model/dir-ng-model.component';
+import { DirNgStyleComponent } from './dir-ng-style/dir-ng-style.component';
+import { Hijo1Component } from './hijo1/hijo1.component';
+import { Hijo2Component } from './hijo2/hijo2.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,10 @@ import { DirNgModelComponent } from './dir-ng-model/dir-ng-model.component';
     DirNgIfComponent,
     DirNgForComponent,
     DirNgSwitchComponent,
-    DirNgModelComponent
+    DirNgModelComponent,
+    DirNgStyleComponent,
+    Hijo1Component,
+    Hijo2Component
   ],
   imports: [
     BrowserModule,

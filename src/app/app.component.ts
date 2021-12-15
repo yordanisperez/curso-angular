@@ -7,6 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'sample-angular';
-
+  image=''
+  procesaPropagar(img:string) {
+    console.log(`Esta es la imagen ${img}`);
+    this.image=img;
+  }
 
 }

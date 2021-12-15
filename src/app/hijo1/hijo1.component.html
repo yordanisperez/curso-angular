@@ -1,0 +1,6 @@
+
+<select [(ngModel)]="imageSelect" (change)="onPropagar()">
+  <option *ngFor="let col of images">
+       {{col}}
+   </option>
+</select>
