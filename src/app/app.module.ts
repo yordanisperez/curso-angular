@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { FiltrarCaracteres } from './form-intro/validacaracteres.directiva';
 
 import { AppComponent } from './app.component';
 import { Compo1Component } from './compo1/compo1.component';
@@ -15,6 +16,13 @@ import { DirNgModelComponent } from './dir-ng-model/dir-ng-model.component';
 import { DirNgStyleComponent } from './dir-ng-style/dir-ng-style.component';
 import { Hijo1Component } from './hijo1/hijo1.component';
 import { Hijo2Component } from './hijo2/hijo2.component';
+import { FormIntroComponent } from './form-intro/form-intro.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http'
+
+import { FormReactiveComponent } from './form-reactive/form-reactive.component';
+
+
 
 @NgModule({
   declarations: [
@@ -30,11 +38,17 @@ import { Hijo2Component } from './hijo2/hijo2.component';
     DirNgModelComponent,
     DirNgStyleComponent,
     Hijo1Component,
-    Hijo2Component
+    Hijo2Component,
+    FormIntroComponent,
+    FiltrarCaracteres,
+    FormReactiveComponent,
+
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

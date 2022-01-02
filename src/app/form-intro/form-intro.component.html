@@ -1,0 +1,105 @@
+<div class="row p-2">
+  <div class="container p-1 marco col-5">
+    <form (ngSubmit)="onSubmit()" #miForm="ngForm">
+      <div class="form-group">
+        <label for="codigo">Codigo</label>
+        <input type="text" class="form-control" maxlength="6" ngModel #codigo="ngModel" #_codigo required minlength="5"
+          name="codigo" #cod (change)="mostrarValor()">
+
+        <div *ngIf="codigo.invalid && (codigo.dirty || codigo.touched)">
+          <!-- hay errores -->
+          <div *ngIf="codigo.errors?.['required']" class="alert alert-danger">
+            codigo requerido
+          </div>
+          <div [hidden]="!codigo.errors?.['minlength']" class="alert alert-danger">
+            Debe tener 3 caracteres como mínimo.
+          </div>
+        </div>
+      </div>
+      <div ngModelGroup="contacto" #contacto="ngModelGroup">
+        <div class="form-group">
+          <label for="nombre">Nombre</label>
+          <input type="text" placeholder="Por favor Introdusca el Nombre" class="form-control" required filtrar-caracteres
+            name="nombre" ngModel #nombre="ngModel" #nomb  (change)="mostrarValor()">
+            <div *ngIf="nombre.invalid && (nombre.dirty || nombre.touched)">
+              <!-- hay errores -->
+              <div *ngIf="nombre.errors?.['required']" class="alert alert-danger">
+                Nombre requerido
+              </div>
+              <div [hidden]="!nombre.errors?.['filtrarCaracteres']" class="alert alert-danger">
+                Solo puede introducir caracteres de la A-Z  en Mayusculas
+              </div>
+            </div>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" placeholder="Por favor Introdusca su correo" class="form-control" name="email" #mail
+            [(ngModel)]="email">
+        </div>
+        <div class="form-group">
+          <label for="movil">Movil</label>
+          <input type="number" placeholder="Por favor Introdusca su # Tel" class="form-control" name="movil" #mov
+            [(ngModel)]="movil">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="edad">Edad</label>
+        <input type="number" class="form-control" value="20" min="15" max="60" name=edad [(ngModel)]="edad"
+          (change)="mostrarValor()">
+      </div>
+      <div class="form-group">
+        <label for="opcion">Opcion</label>
+        <select class="form-control" name="opcion" [(ngModel)]="opcion" (change)="mostrarValor()">
+          <option>Uno</option>
+          <option>Dos</option>
+          <option>Tres</option>
+        </select>
+
+        <label for="sexo">Sexo</label><br>
+        <div class="form-group">
+          <label>
+            <input class="mx-1" type="radio" checked="true" name="sexo" [(ngModel)]="sexo" value="Hombre"
+              (change)="mostrarValor()"> Hombre
+          </label>
+          <label>
+            <input class="mx-1" type="radio" name="sexo" [(ngModel)]="sexo" value="Mujer" (change)="mostrarValor()">
+            Mujer
+          </label>
+        </div>
+
+        <div class="form-group">
+          <label for="comentarios">Comentarios</label>
+          <div class="textarea-btn-holder form-group form-group-replace">
+            <textarea class="form-control text-comment" name="comentario" [(ngModel)]="comentario"
+              (change)="mostrarValor()"></textarea>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>
+            <input class="mx-1" type="checkbox" checked="true" name="activar" [(ngModel)]="activar"
+              (change)="mostrarValor()"> Activar
+          </label>
+        </div>
+        <button type="submit" class="btn btn-primary m-x-2" [disabled]="!miForm.form.valid" (click)="onSubmit()">Submit</button>
+      </div>
+    </form>
+  </div>
+  <div class="container col-5 fondo p-1 m-1">
+    <!-- Para mostrar contenido de las variables-->
+    Cod: {{ cod.value }}<br>
+    Cod: {{ cod.className }}<br>
+    Codigo: {{codigo}}<br>
+    Nombre: {{nombre}} <br>
+    NombreClassname: {{nomb.className}} <br>
+    Email:{{email}}<br>
+    EmailClassname:{{mail.className}}<br>
+    Movil:{{movil}}<br>
+    MovilClassname:{{mov.className}}<br>
+    Edad: {{edad}}<br>
+    Opcion: {{opcion}}<br>
+    Sexo: {{sexo}}<br>
+    Activar:{{activar}}<br>
+    miForm {{ miForm.value | json }}
+  </div>
+</div>
