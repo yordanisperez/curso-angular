@@ -24,6 +24,8 @@ import { FormReactiveComponent } from './form-reactive/form-reactive.component';
 import { DivisionEnteraPipe } from './division-entera.pipe';
 import { CiToDatePipe } from './ci-to-date.pipe';
 import { AplicativoReactivoComponent } from './aplicativo-reactivo/aplicativo-reactivo.component';
+import { AplicativoPlantillaComponent } from './aplicativo-plantilla/aplicativo-plantilla.component';
+import { ValidaCi } from './aplicativo-plantilla/validaCi.directiva';
 
 
 
@@ -48,6 +50,8 @@ import { AplicativoReactivoComponent } from './aplicativo-reactivo/aplicativo-re
     DivisionEnteraPipe,
     CiToDatePipe,
     AplicativoReactivoComponent,
+    AplicativoPlantillaComponent,
+    ValidaCi,
 
   ],
   imports: [

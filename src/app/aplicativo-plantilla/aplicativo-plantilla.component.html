@@ -1,0 +1,36 @@
+
+  <div class="container-fluid p-1 ">
+    <form (ngSubmit)="onSubmit()" #miForm="ngForm">
+      <div class="form-group">
+        <label for="ci">Carnet de Identidad</label>
+        <input type="text" class="form-control mb-3" maxlength="11" minlength="11"  ngModel #ci="ngModel" required
+          name="ci"  validaCi >
+
+        <div *ngIf="ci.invalid && (ci.dirty || ci.touched)">
+          <!-- hay errores -->
+          <div *ngIf="ci.errors?.['required']" class="alert alert-danger">
+            ci requerido
+          </div>
+          <div [hidden]="!ci.errors?.['minlength']" class="alert alert-danger">
+            Debe tener 11 caracteres como mínimo.
+          </div>
+          <div [hidden]="!ci.errors?.['maxlength']" class="alert alert-danger">
+            Debe tener 11 caracteres como máximo.
+          </div>
+          <div [hidden]="!ci.errors?.['validaCi']" class="alert alert-danger">
+            El ci debe tener un formato valido
+          </div>
+        </div>
+      </div>
+
+
+        <button type="submit" class="btn btn-primary m-x-2" [disabled]="!miForm.form.valid" [hidden]="enviado"  (click)="onSubmit()">Send</button>
+
+    </form>
+    <div class="container-fluid fondo p-1 m-1 alert alert-info" [hidden]="!enviado"  >
+      CI: {{ci.value|ciToDate|date:'d MMM y'}}
+
+    </div>
+  </div>
+
+
