@@ -47,7 +47,7 @@
 
   </form>
   <div class="container-fluid fondo p-1 m-1">
-    Codigo: {{codigo.value}}
+    Codigo: {{codigo.value|ciToDate|date:'d MMM y'}}
     Nombre: {{nombre.value}}
     Aficion1: {{aficion1.value}}
     Aficion2: {{aficion2.value}}

@@ -21,6 +21,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http'
 
 import { FormReactiveComponent } from './form-reactive/form-reactive.component';
+import { DivisionEnteraPipe } from './division-entera.pipe';
+import { CiToDatePipe } from './ci-to-date.pipe';
+import { AplicativoReactivoComponent } from './aplicativo-reactivo/aplicativo-reactivo.component';
 
 
 
@@ -42,6 +45,9 @@ import { FormReactiveComponent } from './form-reactive/form-reactive.component';
     FormIntroComponent,
     FiltrarCaracteres,
     FormReactiveComponent,
+    DivisionEnteraPipe,
+    CiToDatePipe,
+    AplicativoReactivoComponent,
 
   ],
   imports: [
