@@ -1,6 +1,6 @@
 
-<select [(ngModel)]="imageSelect" (change)="onPropagar()">
-  <option *ngFor="let col of images">
+<select [(ngModel)]="imageService.image" >
+  <option *ngFor="let col of imageService.images | async">
        {{col}}
    </option>
 </select>

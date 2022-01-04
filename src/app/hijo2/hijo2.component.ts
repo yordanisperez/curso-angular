@@ -1,4 +1,5 @@
 import { Component,Input,OnInit } from '@angular/core';
+import { ImagesObservableService } from '../images-observable.service';
 
 @Component({
   selector: 'app-hijo2',
@@ -6,8 +7,8 @@ import { Component,Input,OnInit } from '@angular/core';
   styleUrls: ['./hijo2.component.css']
 })
 export class Hijo2Component implements OnInit {
-  @Input() image = ''
-  constructor() { }
+
+  constructor(public imageService:ImagesObservableService) { }
 
   ngOnInit(): void {
   }

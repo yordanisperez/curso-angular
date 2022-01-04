@@ -1,4 +1,5 @@
 import { Component, OnInit, Output,EventEmitter } from '@angular/core';
+import { ImagesObservableService } from '../images-observable.service';
 
 
 @Component({
@@ -8,14 +9,13 @@ import { Component, OnInit, Output,EventEmitter } from '@angular/core';
 })
 export class Hijo1Component implements OnInit {
 
-  @Output() imageSelectOutput: EventEmitter<string> = new EventEmitter<string>();
-  imageSelect=''
-  images = ["assets/imagenes/imagen1.jpg", "assets/imagenes/imagen2.jpg", "assets/imagenes/imagen3.jpg"]
-  constructor() { }
-  onPropagar() {
 
-    this.imageSelectOutput.emit(this.imageSelect);
-  }
+
+  constructor(public imageService:ImagesObservableService) { }
+  /*onPropagar() {
+
+   // this.imageSelectOutput.emit(this.imageSelect);
+  }*/
   ngOnInit(): void {
   }
 

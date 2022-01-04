@@ -26,6 +26,11 @@ import { CiToDatePipe } from './ci-to-date.pipe';
 import { AplicativoReactivoComponent } from './aplicativo-reactivo/aplicativo-reactivo.component';
 import { AplicativoPlantillaComponent } from './aplicativo-plantilla/aplicativo-plantilla.component';
 import { ValidaCi } from './aplicativo-plantilla/validaCi.directiva';
+import { LibroListaComponent } from './libro-lista/libro-lista.component';
+import { LibroService } from './libro.service';
+import { LoggerService } from './logger.service';
+import { LibroObservableService } from './libro-observable.service';
+import { ImagesObservableService } from './images-observable.service';
 
 
 
@@ -52,6 +57,7 @@ import { ValidaCi } from './aplicativo-plantilla/validaCi.directiva';
     AplicativoReactivoComponent,
     AplicativoPlantillaComponent,
     ValidaCi,
+    LibroListaComponent,
 
   ],
   imports: [
@@ -60,7 +66,7 @@ import { ValidaCi } from './aplicativo-plantilla/validaCi.directiva';
     ReactiveFormsModule,
     HttpClientModule,
   ],
-  providers: [],
+  providers: [LibroService,LibroObservableService,LoggerService,ImagesObservableService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
