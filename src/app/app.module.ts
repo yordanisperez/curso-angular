@@ -31,8 +31,23 @@ import { LibroService } from './libro.service';
 import { LoggerService } from './logger.service';
 import { LibroObservableService } from './libro-observable.service';
 import { ImagesObservableService } from './images-observable.service';
+import { AutorListaComponent } from './autor-lista/autor-lista.component';
+import { RouterModule, Routes } from '@angular/router';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { LibroDetalleComponent } from './libro-detalle/libro-detalle.component';
+import { LibroOpinionesComponent } from './libro-opiniones/libro-opiniones.component';
+import { LibroImagenesComponent } from './libro-imagenes/libro-imagenes.component';
+import { Hijoimagen1Component } from './hijoimagen1/hijoimagen1.component';
+import { Hijoimagen2Component } from './hijoimagen2/hijoimagen2.component';
+import { Hijoimagen3Component } from './hijoimagen3/hijoimagen3.component';
+import { AplicativoVIComponent } from './aplicativo-vi/aplicativo-vi.component';
 
-
+const appRoutes: Routes = [
+  { path: 'imagen1', component: Hijoimagen1Component },
+  { path: 'imagen2', component: Hijoimagen2Component },
+  { path: 'imagen3', component: Hijoimagen3Component },
+  { path: '**', component: NotFoundComponent }
+  ];
 
 @NgModule({
   declarations: [
@@ -58,6 +73,14 @@ import { ImagesObservableService } from './images-observable.service';
     AplicativoPlantillaComponent,
     ValidaCi,
     LibroListaComponent,
+    AutorListaComponent,
+    LibroDetalleComponent,
+    LibroOpinionesComponent,
+    LibroImagenesComponent,
+    Hijoimagen1Component,
+    Hijoimagen2Component,
+    Hijoimagen3Component,
+    AplicativoVIComponent,
 
   ],
   imports: [
@@ -65,7 +88,9 @@ import { ImagesObservableService } from './images-observable.service';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    RouterModule.forRoot(appRoutes),
   ],
+  exports: [RouterModule],
   providers: [LibroService,LibroObservableService,LoggerService,ImagesObservableService],
   bootstrap: [AppComponent]
 })
