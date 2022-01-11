@@ -1,0 +1,19 @@
+{
+  "images": [
+    {
+      "id": 1,
+      "image": "assets/imagenes/imagen1.jpg"
+    },
+    {
+      "id": 2,
+      "image": "assets/imagenes/imagen2.jpg"
+    },
+    {
+      "id": 3,
+      "image": "assets/imagenes/imagen3.jpg"
+    }
+  ],
+  "selimg": {
+    "image": "assets/imagenes/imagen1.jpg"
+  }
+}

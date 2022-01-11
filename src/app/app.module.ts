@@ -41,6 +41,8 @@ import { Hijoimagen1Component } from './hijoimagen1/hijoimagen1.component';
 import { Hijoimagen2Component } from './hijoimagen2/hijoimagen2.component';
 import { Hijoimagen3Component } from './hijoimagen3/hijoimagen3.component';
 import { AplicativoVIComponent } from './aplicativo-vi/aplicativo-vi.component';
+import { HttpClientTestComponent } from './http-client-test/http-client-test.component';
+import { AplicativoVIIComponent } from './aplicativo-vii/aplicativo-vii.component';
 
 const appRoutes: Routes = [
   { path: 'imagen1', component: Hijoimagen1Component },
@@ -81,6 +83,8 @@ const appRoutes: Routes = [
     Hijoimagen2Component,
     Hijoimagen3Component,
     AplicativoVIComponent,
+    HttpClientTestComponent,
+    AplicativoVIIComponent,
 
   ],
   imports: [
