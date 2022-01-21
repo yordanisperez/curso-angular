@@ -3,10 +3,10 @@
 <br>
 <div class="container bg">
   <br>
-  <input class="form-control" [(ngModel)]="nombre" (keyup)="cambiaNombre($event)"><br>
+  <input class="form-control" [(ngModel)]="nombre" #name = "ngModel" (keyup)="cambiaNombre($event)"><br>
   <input class="form-control" [(ngModel)]="nombre2" (keyup)="cambiaNombre2($event)"><br>
 </div>
 <br>
 <div *ngIf="nombre" class="container bg2">
-  <h3>Hola {{ nombre }} / {{ nombre2 }}</h3>
+  <h3>Hola {{ name.value }} / {{ nombre2 }}</h3>
 </div>

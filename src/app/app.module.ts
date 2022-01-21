@@ -43,6 +43,7 @@ import { Hijoimagen3Component } from './hijoimagen3/hijoimagen3.component';
 import { AplicativoVIComponent } from './aplicativo-vi/aplicativo-vi.component';
 import { HttpClientTestComponent } from './http-client-test/http-client-test.component';
 import { AplicativoVIIComponent } from './aplicativo-vii/aplicativo-vii.component';
+import { CmpPropComponent } from './cmp-prop/cmp-prop.component';
 
 const appRoutes: Routes = [
   { path: 'imagen1', component: Hijoimagen1Component },
@@ -85,6 +86,7 @@ const appRoutes: Routes = [
     AplicativoVIComponent,
     HttpClientTestComponent,
     AplicativoVIIComponent,
+    CmpPropComponent,
 
   ],
   imports: [
